@@ -1,21 +1,15 @@
 {% extends "layout.html" %}
-{% block script %}
-    <script src="/static/script.js" defer></script>
-{% endblock %}
+
 {% block title %}
     Home
 {% endblock %}
 
 {% block content %}
-<h1>Home</h1>
-<p>Welcome to my awesome homepage.</p>
-<h2>Config: <span id="config"></span></h2>
-<div class="roulette" style="display:none;">
-    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/star.png" />
-    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/flower.png" />
-    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/coin.png" />
-    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/mshroom.png" />
-    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/chomp.png" />
+<h1>Arena of Solare - Ultimate Bravery</h1>
+<p>How brave are you feeling?</p>
+<div>
+    <a class="btn btn-primary btn-lg" href="/generate?level=1">Cautious</a>
+    <a class="btn btn-primary btn-lg" href="/generate?level=2">Brave</a>
+    <a class="btn btn-primary btn-lg" href="/generate?level=3">Ultimate</a>
 </div>
-<button id="go">Go</button>
 {% endblock %}

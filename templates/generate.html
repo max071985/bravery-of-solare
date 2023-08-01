@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block script %}
+{% if level > 1 %}
+<script src="/static/js/script.js" defer></script>
+{% endif %}
+{% endblock %}
+
+{% block title %}
+Generate
+{% endblock %}
+
+{% block content %}
+<h1>Generate</h1>
+{% if level > 1 %}
+<h2>Config: <span id="config"></span></h2>
+<div class="roulette" style="display:none;">
+    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/star.png" />
+    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/flower.png" />
+    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/coin.png" />
+    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/mshroom.png" />
+    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/chomp.png" />
+</div>
+<button id="go">Go</button>
+{% endif %}
+{% endblock %}
