@@ -1,3 +1,32 @@
+const Classes = {
+    '0' : 'Warrior',
+    '1' : 'Hashashin',
+    '2' : 'Sage',
+    '4' : 'Ranger',
+    '5' : 'Guardian',
+    '7' : 'Drakania',
+    '8' : 'Sorceress',
+    '9' : 'Nova',
+    '10' : 'Corsair',
+    '11' : 'Lahn',
+    '12' : 'Berserker',
+    '15' : 'Maegu',
+    '16' : 'Tamer',
+    '17' : 'Shai',
+    '19' : 'Striker',
+    '20' : 'Musa',
+    '21' : 'Maehwa',
+    '23' : 'Mystic',
+    '24' : 'Valkyrie',
+    '25' : 'Kunoichi',
+    '26' : 'Ninja',
+    '27' : 'Dark Knight',
+    '28' : 'Wizard',
+    '29' : 'Archer',
+    '30' : 'Woosa',
+    '31' : 'Witch'
+};
+
 // Lottery js
 (function($) {
     var Roulette = function(options) {
@@ -195,3 +224,12 @@ $('#go').click(function() {
         .roulette('start');
 })
 // End Lottery js
+
+// Start class images load
+$(window).on("load", function() {
+    for(var i = 0; i <= 31; i++) {
+        if (i == 3 || i == 6 || i == 13 || i == 14 || i == 18 || i == 22) continue;
+        $('#bos-classes').append('<img id="'+ Classes[String(i)] +'" class="bos-class-img" src="https://bdocodex.com/images/skillcalc/class_' + i + '.webp" />');
+    }
+});
+// End class images load

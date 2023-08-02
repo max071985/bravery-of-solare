@@ -1,9 +1,8 @@
 {% extends "layout.html" %}
 
 {% block script %}
-{% if level > 1 %}
 <script src="/static/js/script.js" defer></script>
-{% endif %}
+<style src="/static/css/style.css"></style>
 {% endblock %}
 
 {% block title %}
@@ -12,14 +11,19 @@ Generate
 
 {% block content %}
 <h1>Generate</h1>
+<div>
+    <h5 class="mt-2">Classes</h5>
+    <div class="mt-1 bos-classes" id="bos-classes">
+    </div>
+</div>
 {% if level > 1 %}
 <h2>Config: <span id="config"></span></h2>
 <div class="roulette" style="display:none;">
-    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/star.png" />
-    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/flower.png" />
-    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/coin.png" />
-    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/mshroom.png" />
-    <img src="https://raw.githubusercontent.com/skryshtafovych/Lottery-html5/master/chomp.png" />
+    <img src="https://bdocodex.com/images/skillcalc/class_0.webp" />
+    <img src="https://bdocodex.com/images/skillcalc/class_1.webp" />
+    <img src="https://bdocodex.com/images/skillcalc/class_2.webp" />
+    <img src="https://bdocodex.com/images/skillcalc/class_3.webp" />
+    <img src="https://bdocodex.com/images/skillcalc/class_4.webp" />
 </div>
 <button id="go">Go</button>
 {% endif %}
