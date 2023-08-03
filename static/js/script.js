@@ -229,7 +229,7 @@ $('#go').click(function() {
 function load_class_images() {
     for(var i = 0; i <= 31; i++) {
         if (i == 3 || i == 6 || i == 13 || i == 14 || i == 18 || i == 22) continue;
-        $('#bos-classes').append('<img id="'+ Classes[String(i)] +'" class="bos-class-img" src="https://bdocodex.com/images/skillcalc/class_' + i + '.webp" />');
+        $('#bos-classes').append('<img id="'+ Classes[String(i)] +'" class="bos-class-img bos-class-active" src="https://bdocodex.com/images/skillcalc/class_' + i + '.webp" />');
     }
 }
 // End class images load
@@ -253,6 +253,18 @@ $.fn.sort_select_box = function(){
 $(window).on("load", function() {
    // Load class images
     load_class_images();
+
     // Sort class images
     $('#bos-classes').sort_select_box(); 
+
+    // Use mousedown and click event handlers for the images
+    $('#bos-classes').on('click', 'img', function() {
+        $(this).toggleClass('bos-class-inactive');
+        $(this).toggleClass('bos-class-active');
+    });
+
+    // Prevent the default dragging behavior when clicking on images
+    $('#bos-classes img').on('dragstart', function(event) {
+        event.preventDefault();
+    });
 });

@@ -1,7 +1,18 @@
-bos-class-img {
-    width:48px;
-    height:48px;
-    background: url(../img/loading.gif) 50% no-repeat;
-    border: 1px solid black;
-    border-radius:  5px;
+.bos-class-img {
+    width: 48px;
+    height: 48px;
+}
+
+.bos-class-img:hover {
+    transform: scale(1.1);
+}
+
+.bos-class-active {
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bos-class-inactive {
+    opacity: 0.2;
+    transition: opacity 0.3s ease-in-out;
 }
