@@ -27,6 +27,47 @@ const Classes = {
     '25' : 'Maegu'
 };
 
+const AoSItems = {
+    // Helmets
+    11013 : "Giath's Helmet",
+    11101 : "Griffon's Helmet",
+    // Gloves
+    11102 : "Leebur's Gloves",
+    11015 : "Bheg's Gloves",
+    // Boots
+    11016 : "Muskan's Shoes",
+    11103 : "Urugon's Shoes",
+    // Armor
+    11017 : "Dim Tree Spirit's Armor",
+    740603 : "Slumbering Sage's Armor",
+    // Rings
+    12068 : "Ominous Ring",
+    12042 : "Forest Ronaros Ring",
+    12031 : "Ring of Crescent Guardian",
+    740605 : "Stormy Eye Ring",
+    // Earrings
+    11828 : "Tungrad Earring",
+    11855 : "Dawn Earring",
+    11834 : "Narc Ear Accessory",
+    740606 : "Peaceful Vagabond's Earring",
+    // Necklaces
+    11663 : "Revived Lunar Necklace",
+    11625 : "Sicil's Necklace",
+    11607 : "Ogre Ring",
+    // Belts
+    12229 : "Centaurus Belt",
+    12257 : "Turo's Belt",
+    12251 : "Orkinrad's Belt",
+    12230 : "Basilisk's Belt",
+    12233 : "Stormy Eye Belt"
+    // Main Weapons
+    // TODO: #1 Add main weapons
+    // Awakening Weapons
+    // TODO: #2 Add awakening weapons
+    // Sub Weapons
+    // TODO: #3 Add sub weapons
+};
+
 // Lottery js
 (function($) {
     var Roulette = function(options) {
