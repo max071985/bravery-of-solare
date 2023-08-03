@@ -21,7 +21,7 @@ h1 {
 
 .classes-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(50px, 1fr)); /* Adjust image size */
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Adjust image size */
     gap: 5px; /* Adjust gap between images */
 }
 /* Class image CSS */

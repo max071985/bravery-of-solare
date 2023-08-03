@@ -244,7 +244,7 @@ $.fn.sort_select_box = function(){
         else if ($(a).attr('id') < $(b).attr('id')) return -1;
         else return 0
     })
-   //replace with sorted my_options;
+   //replace with sorted images;
    $(this).empty().append( images );
 }
 // End sort classes
