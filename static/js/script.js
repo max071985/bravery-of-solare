@@ -249,6 +249,13 @@ $.fn.sort_select_box = function(){
 }
 // End sort classes
 
+// Start class selection counter
+function updateItemCount(className) {
+    const itemCount = $("." + className).length;
+    $("." + className + "-count").text(itemCount);
+}
+// End class selection counter
+
 // On page load
 $(window).on("load", function() {
    // Load class images
@@ -261,10 +268,16 @@ $(window).on("load", function() {
     $('#bos-classes').on('click', 'img', function() {
         $(this).toggleClass('bos-class-inactive');
         $(this).toggleClass('bos-class-active');
+        updateItemCount('bos-class-active');
     });
 
     // Prevent the default dragging behavior when clicking on images
     $('#bos-classes img').on('dragstart', function(event) {
         event.preventDefault();
     });
+
+    // Initialize class selection counter
+    updateItemCount('bos-class-active');
+    // Display the initial item count in the target element
+    $('#bos-class-count-total').text($("." + 'bos-class-active').length);
 });
