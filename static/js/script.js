@@ -226,10 +226,33 @@ $('#go').click(function() {
 // End Lottery js
 
 // Start class images load
-$(window).on("load", function() {
+function load_class_images() {
     for(var i = 0; i <= 31; i++) {
         if (i == 3 || i == 6 || i == 13 || i == 14 || i == 18 || i == 22) continue;
         $('#bos-classes').append('<img id="'+ Classes[String(i)] +'" class="bos-class-img" src="https://bdocodex.com/images/skillcalc/class_' + i + '.webp" />');
     }
-});
+}
 // End class images load
+
+// Sort classes
+$.fn.sort_select_box = function(){
+    // Get images from div
+    var images = $("#" + this.attr('id')).find('img');
+    // sort alphabetically by id
+    images.sort(function(a,b) {
+        if ($(a).attr('id') > $(b).attr('id')) return 1;
+        else if ($(a).attr('id') < $(b).attr('id')) return -1;
+        else return 0
+    })
+   //replace with sorted my_options;
+   $(this).empty().append( images );
+}
+// End sort classes
+
+// On page load
+$(window).on("load", function() {
+   // Load class images
+    load_class_images();
+    // Sort classes
+    $('#bos-classes').sort_select_box(); 
+});
