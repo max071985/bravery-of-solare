@@ -253,6 +253,6 @@ $.fn.sort_select_box = function(){
 $(window).on("load", function() {
    // Load class images
     load_class_images();
-    // Sort classes
+    // Sort class images
     $('#bos-classes').sort_select_box(); 
 });
