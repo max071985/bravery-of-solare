@@ -10,13 +10,13 @@ Generate
 {% endblock %}
 
 {% block content %}
-<h1>Generate</h1>
-<div>
-    <h5 class="mt-2">Classes</h5>
-    <div class="mt-1 bos-classes" id="bos-classes">
+<div class="container">
+    <h1>Generate</h1>
+    <div class="classes-grid" id="bos-classes">
     </div>
 </div>
-{% if level > 1 %}
+</div>
+<!-- {% if level > 1 %}
 <h2>Config: <span id="config"></span></h2>
 <div class="roulette" style="display:none;">
     <img src="https://bdocodex.com/images/skillcalc/class_0.webp" />
@@ -26,5 +26,5 @@ Generate
     <img src="https://bdocodex.com/images/skillcalc/class_4.webp" />
 </div>
 <button id="go">Go</button>
-{% endif %}
+{% endif %} -->
 {% endblock %}
