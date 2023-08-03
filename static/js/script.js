@@ -1,30 +1,30 @@
 const Classes = {
-    '0' : 'Warrior',
-    '1' : 'Hashashin',
-    '2' : 'Sage',
-    '4' : 'Ranger',
-    '5' : 'Guardian',
-    '7' : 'Drakania',
-    '8' : 'Sorceress',
-    '9' : 'Nova',
-    '10' : 'Corsair',
-    '11' : 'Lahn',
-    '12' : 'Berserker',
-    '15' : 'Maegu',
-    '16' : 'Tamer',
+    '0' : 'Berseker',
+    '1' : 'Ranger',
+    '2' : 'Sorceress',
+    '3' : 'Tamer',
+    '4' : 'Valkyrie',
+    '5' : 'Warrior',
+    '6' : 'Witch',
+    '7' : 'Wizard',
+    '8' : 'Musa',
+    '9' : 'Maehwa',
+    '10' : 'Ninja',
+    '11' : 'Kunoichi',
+    '12' : 'Dark Knight',
+    '13' : 'Striker',
+    '14' : 'Mystic',
+    '15' : 'Lahn',
+    '16' : 'Archer',
     '17' : 'Shai',
-    '19' : 'Striker',
-    '20' : 'Musa',
-    '21' : 'Maehwa',
-    '23' : 'Mystic',
-    '24' : 'Valkyrie',
-    '25' : 'Kunoichi',
-    '26' : 'Ninja',
-    '27' : 'Dark Knight',
-    '28' : 'Wizard',
-    '29' : 'Archer',
-    '30' : 'Woosa',
-    '31' : 'Witch'
+    '18' : 'Guardian',
+    '19' : 'Hashashin',
+    '20' : 'Nova',
+    '21' : 'Sage',
+    '22' : 'Corsair',
+    '23' : 'Drakania',
+    '24' : 'Woosa',
+    '25' : 'Maegu'
 };
 
 // Lottery js
@@ -227,9 +227,8 @@ $('#go').click(function() {
 
 // Start class images load
 function load_class_images() {
-    for(var i = 0; i <= 31; i++) {
-        if (i == 3 || i == 6 || i == 13 || i == 14 || i == 18 || i == 22) continue;
-        $('#bos-classes').append('<img id="'+ Classes[String(i)] +'" class="bos-class-img bos-class-active" src="https://bdocodex.com/images/skillcalc/class_' + i + '.webp" />');
+    for(var i = 0; i < 26; i++) {
+        $('#bos-classes').append('<img id="'+ Classes[String(i)] +'" class="bos-class-img bos-class-active" src="https://assets.garmoth.com/classes/200/' + i + '.webp" />');
     }
 }
 // End class images load
