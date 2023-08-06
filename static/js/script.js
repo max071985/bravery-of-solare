@@ -167,6 +167,16 @@ const Belts = {
     12230: "Basilisk's Belt",
     12233: "Stormy Eye Belt"
 };
+// PATHS
+// Armors
+const helmetPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/13_hel/%ITEM_ID%.webp"; // Path to helmet icons
+const armorPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/09_upperbody/%ITEM_ID%.webp"; // Path to armor icons
+const bootPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/12_foot/%ITEM_ID%.webp"; // Path to boot icons
+const glovePath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/11_hand/%ITEM_ID%.webp"; // Path to glove icons
+// Weapons
+const classIconPath = "https://assets.garmoth.com/classes/200/%INDEX%.webp"; // Path to class icons
+const weaponPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/01_weapon/%ITEM_ID%.webp"; // Path to main/awa weapon icons
+const subWeaponPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/08_subweapon/%ITEM_ID%.webp"; // Path to sub weapon icons
 // Lottery js
 (function($) {
     var Roulette = function(options) {
@@ -367,9 +377,10 @@ $('#go').click(function() {
 
 // Start class images load
 function load_class_images() {
-    for(var i = 0; i < 26; i++) {
-        $('#bos-classes').append('<img id="'+ Classes[String(i)] +'" class="bos-class-img bos-class-active" src="https://assets.garmoth.com/classes/200/' + i + '.webp" />');
-    }
+    // Iterate through classes and load images
+    for (const [key, value] of Object.entries(Classes)) {
+        $('#bos-classes').append('<img id="'+ value +'" class="bos-class-img bos-class-active" src="'+ classIconPath.replace("%INDEX%", key) + '" />');
+      }
 }
 // End class images load
 
