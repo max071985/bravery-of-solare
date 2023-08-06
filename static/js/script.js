@@ -56,10 +56,6 @@ const MainWeapons = {
     'Drakania' : {733971 : 'Kzarka Slayer', 733972 : 'Offin Tett\'s Radiant Slayer'},
     'Woosa' : {739410 : 'Kzarka Swallowtail Fan', 739438 : 'Offin Tett\'s Radiant Swallowtail Fan'},
     'Maegu' : {740710 : 'Kzarka Foxspirit Charm', 740738 : 'Offin Tett\'s Radiant Foxspirit Charm'}
-    // Awakening Weapons
-    // TODO: #2 Add awakening weapons
-    // Sub Weapons
-    // TODO: #3 Add sub weapons
 };
 const AwaWeapons = {
     // Awakening Weapons
@@ -91,6 +87,7 @@ const AwaWeapons = {
     'Maegu' : {741702 : 'Dandelion Foxtail Fans'}
 };
 const SubWeapons = {
+    // Sub Weapons
     'Striker' : {701097 : 'Nouver Vambrace', 701098 : 'Kutum Vambrace'},
     'Mystic' : {701097 : 'Nouver Vambrace', 701098 : 'Kutum Vambrace'},
     'Musa' : {701091 : 'Nouver Horn Bow', 701092 : 'Kutum Horn Bow'},
