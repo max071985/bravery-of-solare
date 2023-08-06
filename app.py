@@ -9,7 +9,7 @@ def index():
 @app.route("/generate", methods=["GET", "POST"])
 def generate():
     if request.method == "POST":
-        # Generate the maze
+        # Generate the bravery build
         return redirect("/")
     else:
         if request.args.get("level") == "1":

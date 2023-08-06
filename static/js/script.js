@@ -27,47 +27,146 @@ const Classes = {
     '25' : 'Maegu'
 };
 
-const AoSItems = {
-    // Helmets
-    11013 : "Giath's Helmet",
-    11101 : "Griffon's Helmet",
-    // Gloves
-    11102 : "Leebur's Gloves",
-    11015 : "Bheg's Gloves",
-    // Boots
-    11016 : "Muskan's Shoes",
-    11103 : "Urugon's Shoes",
-    // Armor
-    11017 : "Dim Tree Spirit's Armor",
-    740603 : "Slumbering Sage's Armor",
-    // Rings
-    12068 : "Ominous Ring",
-    12042 : "Forest Ronaros Ring",
-    12031 : "Ring of Crescent Guardian",
-    740605 : "Stormy Eye Ring",
-    // Earrings
-    11828 : "Tungrad Earring",
-    11855 : "Dawn Earring",
-    11834 : "Narc Ear Accessory",
-    740606 : "Peaceful Vagabond's Earring",
-    // Necklaces
-    11663 : "Revived Lunar Necklace",
-    11625 : "Sicil's Necklace",
-    11607 : "Ogre Ring",
-    // Belts
-    12229 : "Centaurus Belt",
-    12257 : "Turo's Belt",
-    12251 : "Orkinrad's Belt",
-    12230 : "Basilisk's Belt",
-    12233 : "Stormy Eye Belt"
+const MainWeapons = {
     // Main Weapons
     // TODO: #1 Add main weapons
+    'Striker' : {11210 : 'Kzarka Gauntlet', 11287 : 'Offin Tett\'s Radiant Gauntlet'},
+    'Mystic' : {11210 : 'Kzarka Gauntlet', 11287 : 'Offin Tett\'s Radiant Gauntlet'},
+    'Musa' : {11310 : 'Kzarka Blade', 11386 : 'Offin Tett\'s Radiant Blade'},
+    'Maehwa' : {11310 : 'Kzarka Blade', 11386 : 'Offin Tett\'s Radiant Blade'},
+    'Berserker' : {10610 : 'Kzarka Axe', 10686 : 'Offin Tett\'s Radiant Axe'},
+    'Ranger' : {10210 : 'Kzarka Longbow', 10285 : 'Offin Tett\'s Radiant Longbow'},
+    'Sorceress' : {10410 : 'Kzarka Amulet', 10486 : 'Offin Tett\'s Radiant Amulet'},
+    'Tamer' : {13210 : 'Kzarka Shortsword', 13286 : 'Offin Tett\'s Radiant Shortsword'},
+    'Valkyrie' : {10010 : 'Kzarka Longsword', 10086 : 'Offin Tett\'s Radiant Longsword'},
+    'Warrior' : {10010 : 'Kzarka Longsword', 10086 : 'Offin Tett\'s Radiant Longsword'},
+    'Witch' : {14410 : 'Kzarka Staff', 14486 : 'Offin Tett\'s Radiant Staff'},
+    'Wizard' : {14410 : 'Kzarka Staff', 14486 : 'Offin Tett\'s Radiant Staff'},
+    'Ninja' : {13210 : 'Kzarka Shortsword', 13286 : 'Offin Tett\'s Radiant Shortsword'},
+    'Kunoichi' : {13210 : 'Kzarka Shortsword', 13286 : 'Offin Tett\'s Radiant Shortsword'},
+    'Dark Knight' : {11360 : 'Kzarka Kreigsmesser', 11436 : 'Offin Tett\'s Radiant Kreigsmesser'},
+    'Lahn' : {13410 : 'Kzarka Crescent Pendulum', 13487 : 'Offin Tett\'s Radiant Crescent Pendulum'},
+    'Archer' : {13780 : 'Kzarka Crossbow', 13786 : 'Offin Tett\'s Radiant Crossbow'},
+    'Shai' : {718510 : 'Kzarka Florang', 718586 : 'Offin Tett\'s Radiant Florang'},
+    'Guardian' : {690513 : 'Kzarka Battle Axe', 690541 : 'Offin Tett\'s Radiant Battle Axe'},
+    'Hashashin' : {692011 : 'Kzarka Shamshir', 692039 : 'Offin Tett\'s Radiant Shamshir'},
+    'Nova' : {730511 : 'Kzarka Morning Star', 730539 : 'Offin Tett\'s Radiant Morning Star'},
+    'Sage' : {732260 : 'Kzarka Kyve', 732288 : 'Offin Tett\'s Radiant Kyve'},
+    'Corsair' : {733010 : 'Kzarka Serenaca', 733038 : 'Offin Tett\'s Radiant Serenaca'},
+    'Drakania' : {733971 : 'Kzarka Slayer', 733972 : 'Offin Tett\'s Radiant Slayer'},
+    'Woosa' : {739410 : 'Kzarka Swallowtail Fan', 739438 : 'Offin Tett\'s Radiant Swallowtail Fan'},
+    'Maegu' : {740710 : 'Kzarka Foxspirit Charm', 740738 : 'Offin Tett\'s Radiant Foxspirit Charm'}
     // Awakening Weapons
     // TODO: #2 Add awakening weapons
     // Sub Weapons
     // TODO: #3 Add sub weapons
 };
+const AwaWeapons = {
+    // Awakening Weapons
+    'Striker' : {14822 : 'Dandelion Gardbrace'},
+    'Mystic' : {14830 : 'Dandelion Cestus'},
+    'Musa' : {14762 : 'Dandelion Blade'},
+    'Maehwa' : {14772 : 'Dandelion Kerispear'},
+    'Berserker' : {14722 : 'Dandelion Iron Buster'},
+    'Ranger' : {14732 : 'Dandelion Kamasylven Sword'},
+    'Sorceress' : {14712 : 'Dandelion Scythe'},
+    'Tamer' : {14742 : 'Dandelion Celestial Bo Staff'},
+    'Valkyrie' : {14752 : 'Dandelion Lancia'},
+    'Warrior' : {14702 : 'Dandelion Greatsword'},
+    'Witch' : {14802 : 'Dandelion Aad Sphera'},
+    'Wizard' : {14812 : 'Dandelion Godr Sphera'},
+    'Ninja' : {14782 : 'Dandelion Sura Katana'},
+    'Kunoichi' : {14792 : 'Dandelion Sah Chakram'},
+    'Dark Knight' : {14817 : 'Dandelion Vediant'},
+    'Lahn' : {550502 : 'Dandelion Crimson Glaives'},
+    'Archer' : {13903 : 'Dandelion Greatbow'},
+    'Shai' : {690005 : 'Artina Sol'},
+    'Guardian' : {691503 : 'Kzarka Jordun'},
+    'Hashashin' : {692802 : 'Dandelion Dual Glaives'},
+    'Nova' : {730903 : 'Dandelion Sting'},
+    'Sage' : {732652 : 'Dandelion Kibelius'},
+    'Corsair' : {733402 : 'Dandelion Patraca'},
+    'Drakania' : {735802 : 'Dandelion Trion'},
+    'Woosa' : {740402 : 'Dandelion Soul Tome'},
+    'Maegu' : {741702 : 'Dandelion Foxtail Fans'}
+};
+const SubWeapons = {
+    'Striker' : {701097 : 'Nouver Vambrace', 701098 : 'Kutum Vambrace'},
+    'Mystic' : {701097 : 'Nouver Vambrace', 701098 : 'Kutum Vambrace'},
+    'Musa' : {701091 : 'Nouver Horn Bow', 701092 : 'Kutum Horn Bow'},
+    'Maehwa' : {701091 : 'Nouver Horn Bow', 701092 : 'Kutum Horn Bow'},
+    'Berserker' : {701088 : 'Kutum Axe', 701087 : 'Nouver Axe'},
+    'Ranger' : {701083 : 'Nouver Dagger', 701084 : 'Kutum Dagger'},
+    'Sorceress' : {701085 : 'Nouver Talisman', 701086 : 'Kutum Talisman'},
+    'Tamer' : {701089 : 'Nouver Trinket', 701090 : 'Kutum Trinket'},
+    'Valkyrie' : {701081 : 'Nouver Shield', 701082 : 'Kutum Shield'},
+    'Warrior' : {701081 : 'Nouver Shield', 701082 : 'Kutum Shield'},
+    'Witch' : {701083 : 'Nouver Dagger', 701084 : 'Kutum Dagger'},
+    'Wizard' : {701083 : 'Nouver Dagger', 701084 : 'Kutum Dagger'},
+    'Ninja' : {701095 : 'Nouver Shuriken', 701096 : 'Kutum Shuriken'},
+    'Kunoichi' : {701093 : 'Nouver Kunai', 701094 : 'Kutum Kunai'},
+    'Dark Knight' : {701087 : 'Nouver Ornamental Knot', 701088 : 'Kutum Ornamental Knot'},
+    'Lahn' : {701099 : 'Nouver Noble Sword', 701100 : 'Kutum Noble Sword'},
+    'Archer' : {701101 : 'Nouver Ra\'ghon', 701102 : 'Kutum Ra\'ghon'},
+    'Shai' : {719055 : 'Nouver Vitclari', 719056 : 'Kutum Vitclari'},
+    'Guardian' : {701081 : 'Nouver Shield', 701082 : 'Kutum Shield'},
+    'Hashashin' : {692531 : 'Nouver Haladie', 692532 : 'Kutum Haladie'},
+    'Nova' : {730733 : 'Nouver Quoratum', 730734 : 'Kutum Quoratum'},
+    'Sage' : {701085 : 'Nouver Talisman', 701086 : 'Kutum Talisman'},
+    'Corsair' : {733232 : 'Nouver Mareca', 733233 : 'Kutum Mareca'},
+    'Drakania' : {733973 : 'Nouver Shard', 733974 : 'Kutum Shard'},
+    'Woosa' : {739931 : 'Nouver Do Stave', 739932 : 'Kutum Do Stave'},
+    'Maegu' : {741030 : 'Nouver Binyeo Knife', 741031 : 'Kutum Binyeo Knife'}
+};
+const Helmets = {
+    // Helmets
+    11013: "Giath's Helmet",
+    11101: "Griffon's Helmet"
+};
+const Gloves = {
+    // Gloves
+    11102: "Leebur's Gloves",
+    11015: "Bheg's Gloves"
+};
+const Boots = {
+    // Boots
+    11016: "Muskan's Shoes",
+    11103: "Urugon's Shoes"
+};
+const Armor = {
+    // Armor
+    11017: "Dim Tree Spirit's Armor",
+    740603: "Slumbering Sage's Armor"
+};
+const Rings = {
+    // Rings
+    12068: "Ominous Ring",
+    12042: "Forest Ronaros Ring",
+    12031: "Ring of Crescent Guardian",
+    740605: "Stormy Eye Ring"
+};
+const Earrings = {
 
+    // Earrings
+    11828: "Tungrad Earring",
+    11855: "Dawn Earring",
+    11834: "Narc Ear Accessory",
+    740606: "Peaceful Vagabond's Earring"
+};
+const Necklaces = {
+    // Necklaces
+    11663: "Revived Lunar Necklace",
+    11625: "Sicil's Necklace",
+    11607: "Ogre Ring"
+};
+const Belts = {
+    // Belts
+    12229: "Centaurus Belt",
+    12257: "Turo's Belt",
+    12251: "Orkinrad's Belt",
+    12230: "Basilisk's Belt",
+    12233: "Stormy Eye Belt"
+};
 // Lottery js
 (function($) {
     var Roulette = function(options) {
