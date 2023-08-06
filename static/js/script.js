@@ -27,13 +27,18 @@ const Classes = {
     '25' : 'Maegu'
 };
 
+const State = {
+    '0' : 'Awakening',
+    '1' : 'Succession'
+}
+
 const MainWeapons = {
     // Main Weapons
     // TODO: #1 Add main weapons
     'Striker' : {11210 : 'Kzarka Gauntlet', 11287 : 'Offin Tett\'s Radiant Gauntlet'},
     'Mystic' : {11210 : 'Kzarka Gauntlet', 11287 : 'Offin Tett\'s Radiant Gauntlet'},
-    'Musa' : {11310 : 'Kzarka Blade', 11386 : 'Offin Tett\'s Radiant Blade'},
-    'Maehwa' : {11310 : 'Kzarka Blade', 11386 : 'Offin Tett\'s Radiant Blade'},
+    'Musa' : {13310 : 'Kzarka Blade', 13386 : 'Offin Tett\'s Radiant Blade'},
+    'Maehwa' : {13310 : 'Kzarka Blade', 13386 : 'Offin Tett\'s Radiant Blade'},
     'Berserker' : {10610 : 'Kzarka Axe', 10686 : 'Offin Tett\'s Radiant Axe'},
     'Ranger' : {10210 : 'Kzarka Longbow', 10285 : 'Offin Tett\'s Radiant Longbow'},
     'Sorceress' : {10410 : 'Kzarka Amulet', 10486 : 'Offin Tett\'s Radiant Amulet'},
@@ -393,16 +398,25 @@ function generate_items() {
     var randomClassId = randomClass.id;
     // Display class image in 'gen-class-img'
     $('#gen-class-img').attr('src', randomClass.src);
+    // Pick succession or awakening
+    var state = '';
+    if (randomClassId == "Shai" || randomClassId == "Archer") {
+        
+    }
+    else {
+        var state_id = get_random_from_dict(State);
+        state = State[state_id];
+    }
     // Display class name in 'gen-class-name'
-    $('#gen-class-name').text(randomClassId);
+    $('#gen-class-name').text(randomClassId + ' ' + state);
     // Pick random items for that class
-    var helmet_id = get_random_from_dict(Helmets);
-    var armor_id = get_random_from_dict(Armor);
-    var gloves_id = get_random_from_dict(Gloves);
-    var boots_id = get_random_from_dict(Boots);
-    var main_weapon_id = get_random_from_dict(MainWeapons[randomClassId]);
-    var awa_weapon_id = get_random_from_dict(AwaWeapons[randomClassId]);
-    var sub_weapon_id = get_random_from_dict(SubWeapons[randomClassId]);
+    var helmet_id = fill_id(get_random_from_dict(Helmets));
+    var armor_id = fill_id(get_random_from_dict(Armor));
+    var gloves_id = fill_id(get_random_from_dict(Gloves));
+    var boots_id = fill_id(get_random_from_dict(Boots));
+    var main_weapon_id = fill_id(get_random_from_dict(MainWeapons[randomClassId]));
+    var awa_weapon_id = fill_id(get_random_from_dict(AwaWeapons[randomClassId]));
+    var sub_weapon_id = fill_id(get_random_from_dict(SubWeapons[randomClassId]));
     // TODO: #4 Fill id's to match this format: 00000000. Example: 00715017
     // Display items in 'gen-item-container'
     $('#gen-item-container').empty();
@@ -429,6 +443,15 @@ function get_random_from_dict(dict) {
     var keys = Object.keys(dict);
     var randomIndex = Math.floor(Math.random() * keys.length);
     return keys[randomIndex];
+}
+// Fill id's to match this format: 00000000. Example: 00715017
+function fill_id(id) {
+    var result = '';
+    for (var i = id.length; i < 8; i++) {
+        result += '0';
+    }
+    result += id;
+    return result;
 }
 // Sort classes
 $.fn.sort_select_box = function(){
