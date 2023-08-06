@@ -175,6 +175,11 @@ const helmetPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_c
 const armorPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/09_upperbody/%ITEM_ID%.webp"; // Path to armor icons
 const bootPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/12_foot/%ITEM_ID%.webp"; // Path to boot icons
 const glovePath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/11_hand/%ITEM_ID%.webp"; // Path to glove icons
+// Accessories
+const ringPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/16_ring/%ITEM_ID%.webp"; // Path to ring icons
+const earringPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/17_earring/%ITEM_ID%.webp"; // Path to earring icons
+const necklacePath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/15_necklace/%ITEM_ID%.webp"; // Path to necklace icons
+const beltPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/18_belt/%ITEM_ID%.webp"; // Path to belt icons
 // Weapons
 const classIconPath = "https://assets.garmoth.com/classes/200/%INDEX%.webp"; // Path to class icons
 const weaponPath = "https://assets.garmoth.com/img/new_icon/06_pc_equipitem/00_common/01_weapon/%ITEM_ID%.webp"; // Path to main/awa weapon icons
@@ -417,7 +422,13 @@ function generate_items() {
     var main_weapon_id = fill_id(get_random_from_dict(MainWeapons[randomClassId]));
     var awa_weapon_id = fill_id(get_random_from_dict(AwaWeapons[randomClassId]));
     var sub_weapon_id = fill_id(get_random_from_dict(SubWeapons[randomClassId]));
-    // TODO: #4 Fill id's to match this format: 00000000. Example: 00715017
+    // Pick random accs
+    var ring1_id = fill_id(get_random_from_dict(Rings));
+    var ring2_id = fill_id(get_random_from_dict(Rings));
+    var earring1_id = fill_id(get_random_from_dict(Earrings));
+    var earring2_id = fill_id(get_random_from_dict(Earrings));
+    var belt_id = fill_id(get_random_from_dict(Belts));
+    var necklace_id = fill_id(get_random_from_dict(Necklaces));
     // Display items in 'gen-item-container'
     $('#gen-item-container').empty();
     $('#gen-item-container').append('<img class="gen-item" src="'+ helmetPath.replace("%ITEM_ID%", helmet_id) + '" />');
@@ -427,6 +438,12 @@ function generate_items() {
     $('#gen-item-container').append('<img class="gen-item" src="'+ weaponPath.replace("%ITEM_ID%", main_weapon_id) + '" />');
     $('#gen-item-container').append('<img class="gen-item" src="'+ weaponPath.replace("%ITEM_ID%", awa_weapon_id) + '" />');
     $('#gen-item-container').append('<img class="gen-item" src="'+ subWeaponPath.replace("%ITEM_ID%", sub_weapon_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ ringPath.replace("%ITEM_ID%", ring1_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ ringPath.replace("%ITEM_ID%", ring2_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ earringPath.replace("%ITEM_ID%", earring1_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ earringPath.replace("%ITEM_ID%", earring2_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ beltPath.replace("%ITEM_ID%", belt_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ necklacePath.replace("%ITEM_ID%", necklace_id) + '" />');
     // Set generation button to enabled
     $('#gen-button').attr('disabled', false);
     // Set gen-result to visible
