@@ -13,11 +13,16 @@ Home
 <div class="container-fluid p-5">
     <div class="row">
         <div class="col-md-auto">
-            <!-- <h1>Generate results are here</h1> -->
+            <div id="gen-result" style="display:none">
+                <img id="gen-class-img"></img>
+                <h5 id="gen-class-name"></h5>
+                <div id="gen-item-container">
+                </div>
+            </div>
         </div>
         <div class="col">
             <div class="position-relative p-3">
-                <button class="btn btn-success position-absolute top-50 start-50 translate-middle">Generate</button>
+                <button class="btn btn-success position-absolute top-50 start-50 translate-middle" id="gen-button">Generate</button>
             </div>
             <h5>Classes: </h5>
             <span>Selected: </span><span class="bos-class-active-count"></span>/<span id="bos-class-count-total"></span>

@@ -380,7 +380,56 @@ function load_class_images() {
       }
 }
 // End class images load
-
+// Start item generation
+function generate_items() {
+    // Set generation button to disabled
+    $('#gen-button').attr('disabled', true);
+    // Set gen-result to hidden
+    $('#gen-result').css('display', 'none');
+    // Iterate through all classes that have 'bos-class-active' class
+    var activeClasses = $('.bos-class-active');
+    // Pick 1 random class from the list
+    var randomClass = activeClasses[Math.floor(Math.random() * activeClasses.length)];
+    var randomClassId = randomClass.id;
+    // Display class image in 'gen-class-img'
+    $('#gen-class-img').attr('src', randomClass.src);
+    // Display class name in 'gen-class-name'
+    $('#gen-class-name').text(randomClassId);
+    // Pick random items for that class
+    var helmet_id = get_random_from_dict(Helmets);
+    var armor_id = get_random_from_dict(Armor);
+    var gloves_id = get_random_from_dict(Gloves);
+    var boots_id = get_random_from_dict(Boots);
+    var main_weapon_id = get_random_from_dict(MainWeapons[randomClassId]);
+    var awa_weapon_id = get_random_from_dict(AwaWeapons[randomClassId]);
+    var sub_weapon_id = get_random_from_dict(SubWeapons[randomClassId]);
+    // TODO: #4 Fill id's to match this format: 00000000. Example: 00715017
+    // Display items in 'gen-item-container'
+    $('#gen-item-container').empty();
+    $('#gen-item-container').append('<img class="gen-item" src="'+ helmetPath.replace("%ITEM_ID%", helmet_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ armorPath.replace("%ITEM_ID%", armor_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ glovePath.replace("%ITEM_ID%", gloves_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ bootPath.replace("%ITEM_ID%", boots_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ weaponPath.replace("%ITEM_ID%", main_weapon_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ weaponPath.replace("%ITEM_ID%", awa_weapon_id) + '" />');
+    $('#gen-item-container').append('<img class="gen-item" src="'+ subWeaponPath.replace("%ITEM_ID%", sub_weapon_id) + '" />');
+    // Set generation button to enabled
+    $('#gen-button').attr('disabled', false);
+    // Set gen-result to visible
+    $('#gen-result').css('display', 'block');
+}
+// End item generation
+// Get random item from dictionary
+function get_random_from_dict(dict) {
+    if (!dict || typeof dict !== 'object') {
+        console.error('Invalid input. Please provide a valid dictionary.');
+        return;
+    }
+    
+    var keys = Object.keys(dict);
+    var randomIndex = Math.floor(Math.random() * keys.length);
+    return keys[randomIndex];
+}
 // Sort classes
 $.fn.sort_select_box = function(){
     // Get images from div
@@ -405,6 +454,10 @@ function updateItemCount(className) {
 
 // On page load
 $(window).on("load", function() {
+    // Add generate button click event
+    $('#gen-button').on('click', function() {
+        generate_items();
+    });
    // Load class images
     load_class_images();
 
