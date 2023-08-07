@@ -34,7 +34,6 @@ const State = {
 
 const MainWeapons = {
     // Main Weapons
-    // TODO: #1 Add main weapons
     'Striker' : {11210 : 'Kzarka Gauntlet', 11287 : 'Offin Tett\'s Radiant Gauntlet'},
     'Mystic' : {11210 : 'Kzarka Gauntlet', 11287 : 'Offin Tett\'s Radiant Gauntlet'},
     'Musa' : {13310 : 'Kzarka Blade', 13386 : 'Offin Tett\'s Radiant Blade'},
