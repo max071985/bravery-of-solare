@@ -1,5 +1,5 @@
 const Classes = {
-    '0' : 'Berseker',
+    '0' : 'Berserker',
     '1' : 'Ranger',
     '2' : 'Sorceress',
     '3' : 'Tamer',
@@ -454,7 +454,7 @@ function generate_items() {
 function get_random_from_dict(dict) {
     if (!dict || typeof dict !== 'object') {
         console.error('Invalid input. Please provide a valid dictionary.');
-        return;
+        return 0;
     }
     
     var keys = Object.keys(dict);
@@ -489,14 +489,40 @@ $.fn.sort_select_box = function(){
 function updateItemCount(className) {
     const itemCount = $("." + className).length;
     $("." + className + "-count").text(itemCount);
+    if (itemCount == 0) {
+        $("#gen-button").attr("disabled", true);
+    }
+    else {
+        $("#gen-button").attr("disabled", false);
+    }
 }
 // End class selection counter
+
+// Start select/deselect all classes
+function selectAllClasses() {
+    $('#bos-classes img').removeClass('bos-class-inactive');
+    $('#bos-classes img').addClass('bos-class-active');
+    updateItemCount('bos-class-active');
+}
+function deselectAllClasses() {
+    $('#bos-classes img').removeClass('bos-class-active');
+    $('#bos-classes img').addClass('bos-class-inactive');
+    updateItemCount('bos-class-active');
+}
+// End select/deselect all classes
 
 // On page load
 $(window).on("load", function() {
     // Add generate button click event
     $('#gen-button').on('click', function() {
         generate_items();
+    });
+    // Add select/deselect all classes click events
+    $('#bos-class-select-all').on('click', function() {
+        selectAllClasses();
+    });
+    $('#bos-class-deselect-all').on('click', function() {
+        deselectAllClasses();
     });
    // Load class images
     load_class_images();
