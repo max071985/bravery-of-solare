@@ -40,7 +40,7 @@ const MainWeapons = {
     'Musa' : {13310 : 'Kzarka Blade', 13386 : 'Offin Tett\'s Radiant Blade'},
     'Maehwa' : {13310 : 'Kzarka Blade', 13386 : 'Offin Tett\'s Radiant Blade'},
     'Berserker' : {10610 : 'Kzarka Axe', 10686 : 'Offin Tett\'s Radiant Axe'},
-    'Ranger' : {10210 : 'Kzarka Longbow', 10285 : 'Offin Tett\'s Radiant Longbow'},
+    'Ranger' : {10210 : 'Kzarka Longbow', 10286 : 'Offin Tett\'s Radiant Longbow'},
     'Sorceress' : {10410 : 'Kzarka Amulet', 10486 : 'Offin Tett\'s Radiant Amulet'},
     'Tamer' : {13210 : 'Kzarka Shortsword', 13286 : 'Offin Tett\'s Radiant Shortsword'},
     'Valkyrie' : {10010 : 'Kzarka Longsword', 10086 : 'Offin Tett\'s Radiant Longsword'},
@@ -429,21 +429,22 @@ function generate_items() {
     var earring2_id = fill_id(get_random_from_dict(Earrings));
     var belt_id = fill_id(get_random_from_dict(Belts));
     var necklace_id = fill_id(get_random_from_dict(Necklaces));
+    // Remove all items from 'gen-item-container'
+    $('#gen-item-helmet, #gen-item-armor, #gen-item-gloves, #gen-item-shoes, #gen-item-mainhand, #gen-item-subweapon, #gen-item-awakening, #gen-item-ring1, #gen-item-ring2, #gen-item-earring1, #gen-item-earring2, #gen-item-belt, #gen-item-necklace').empty();
     // Display items in 'gen-item-container'
-    $('#gen-item-container').empty();
-    $('#gen-item-container').append('<img class="gen-item" src="'+ helmetPath.replace("%ITEM_ID%", helmet_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ armorPath.replace("%ITEM_ID%", armor_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ glovePath.replace("%ITEM_ID%", gloves_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ bootPath.replace("%ITEM_ID%", boots_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ weaponPath.replace("%ITEM_ID%", main_weapon_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ weaponPath.replace("%ITEM_ID%", awa_weapon_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ subWeaponPath.replace("%ITEM_ID%", sub_weapon_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ ringPath.replace("%ITEM_ID%", ring1_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ ringPath.replace("%ITEM_ID%", ring2_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ earringPath.replace("%ITEM_ID%", earring1_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ earringPath.replace("%ITEM_ID%", earring2_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ beltPath.replace("%ITEM_ID%", belt_id) + '" />');
-    $('#gen-item-container').append('<img class="gen-item" src="'+ necklacePath.replace("%ITEM_ID%", necklace_id) + '" />');
+    $('#gen-item-helmet').append('<img class="gen-item" src="'+ helmetPath.replace("%ITEM_ID%", helmet_id) + '" />');
+    $('#gen-item-armor').append('<img class="gen-item" src="'+ armorPath.replace("%ITEM_ID%", armor_id) + '" />');
+    $('#gen-item-gloves').append('<img class="gen-item" src="'+ glovePath.replace("%ITEM_ID%", gloves_id) + '" />');
+    $('#gen-item-shoes').append('<img class="gen-item" src="'+ bootPath.replace("%ITEM_ID%", boots_id) + '" />');
+    $('#gen-item-mainhand').append('<img class="gen-item" src="'+ weaponPath.replace("%ITEM_ID%", main_weapon_id) + '" />');
+    $('#gen-item-awakening').append('<img class="gen-item" src="'+ weaponPath.replace("%ITEM_ID%", awa_weapon_id) + '" />');
+    $('#gen-item-subweapon').append('<img class="gen-item" src="'+ subWeaponPath.replace("%ITEM_ID%", sub_weapon_id) + '" />');
+    $('#gen-item-ring1').append('<img class="gen-item" src="'+ ringPath.replace("%ITEM_ID%", ring1_id) + '" />');
+    $('#gen-item-ring2').append('<img class="gen-item" src="'+ ringPath.replace("%ITEM_ID%", ring2_id) + '" />');
+    $('#gen-item-earring1').append('<img class="gen-item" src="'+ earringPath.replace("%ITEM_ID%", earring1_id) + '" />');
+    $('#gen-item-earring2').append('<img class="gen-item" src="'+ earringPath.replace("%ITEM_ID%", earring2_id) + '" />');
+    $('#gen-item-belt').append('<img class="gen-item" src="'+ beltPath.replace("%ITEM_ID%", belt_id) + '" />');
+    $('#gen-item-necklace').append('<img class="gen-item" src="'+ necklacePath.replace("%ITEM_ID%", necklace_id) + '" />');
     // Set generation button to enabled
     $('#gen-button').attr('disabled', false);
     // Set gen-result to visible

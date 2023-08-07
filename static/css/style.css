@@ -44,3 +44,75 @@ h1 {
     transition: opacity 0.3s ease-in-out;
 }
 /* End Class image CSS */
+.gear {
+    align-items: center;
+    background: rgba(32,34,37,.8);
+    border-radius: 0.25rem;
+    display: flex;
+    height: 49px;
+    justify-content: center;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 49px;
+}
+.gen-armor {
+    right: 92px;
+    top: -15px;
+}
+.gen-helmet {
+    left: 92px;
+    top: -15px;
+}
+.gen-gloves {
+    right: -20px;
+    top: 200px;
+}
+.gen-boots {
+    left: -20px;
+    top: 200px;
+}
+.gen-main {
+    left: 80px;
+    top: 310px;
+}
+.gen-awa {
+    left: 145px;
+    top: 322px;
+}
+.gen-sub {
+    right: 80px;
+    top: 310px;
+}
+.gen-ring1 {
+    right: 12px;
+    top: 51px;
+}
+.gen-ring2 {
+    right: -20px;
+    top: 111px;
+}
+.gen-neck {
+    right: 25px;
+    top: 270px;
+}
+.gen-ear1 {
+    left: 12px;
+    top: 51px;
+}
+.gen-ear2 {
+    left: -20px;
+    top: 111px;
+}
+.gen-belt {
+    left: 25px;
+    top: 270px;
+}
+.equipment-ring {
+    border: 3px solid #5e6165;
+    border-radius: 50%;
+    height: 340px;
+    width: 340px;
+    top:10px;
+}
