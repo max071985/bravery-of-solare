@@ -1,2 +1,3 @@
+## [Abandoned]
 # Bravery of Solare
-The well known Ultimate Bravery but in Black Desert's Arena of Solare.
+Black Desert arena of solare random build maker
